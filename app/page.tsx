@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-zinc-950 text-white p-8">
@@ -12,9 +14,10 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-6">
-        <button className="px-8 py-4 bg-amber-600 hover:bg-amber-500 text-black font-bold rounded-lg transition-colors">
+        <Link href="/lobby" className="px-8 py-4 bg-amber-600 hover:bg-amber-500 text-black font-bold rounded-lg transition-colors text-center">
           Enter the 360° Lobby
-        </button>
+        </Link>
+        
         <button className="px-8 py-4 border border-zinc-700 hover:bg-zinc-800 text-white font-bold rounded-lg transition-colors">
           Listen to ARIA Radio
         </button>
@@ -22,4 +25,3 @@ export default function Home() {
 
     </main>
   );
-}
